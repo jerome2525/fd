@@ -1,0 +1,18 @@
+/* Fonts
+---------------------------------------- */
+$font-stack-1: 'Poppins', sans-serif;
+
+@include breakpoint-set('default feature', 'max-width');
+
+
+$one_six: max-width 1600px;
+$one_three: max-width 1300px;
+$one_one_two_five: max-width 1125px;
+$nine_hundred: max-width 900px;
+$seven_six_seven: max-width 767px;
+$three_fourty: max-width 400px;
+
+
+
+
+

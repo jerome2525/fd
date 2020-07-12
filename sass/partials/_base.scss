@@ -1,0 +1,378 @@
+/*
+	Theme Name: foodala
+	Theme URI: https://foodala.com
+	Description: Foodala WordPress Theme
+	Version: 1.4.3
+	Author: Jerome Anyayahan
+	Author URI: https://foodala.com
+	Tags: Blank, HTML5, CSS3
+
+	License: MIT
+	License URI: http://opensource.org/licenses/mit-license.php
+*/
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+/* global box-sizing */
+*,
+*:after,
+*:before {
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+
+html {
+	font-size: 16px;
+	@include breakpoint($one_six) {
+		font-size: 16px;
+	}
+	@include breakpoint($one_three) {
+		font-size: 14px;
+	}
+	@include breakpoint($one_one_two_five) {
+		font-size: 14px;
+	}
+	@include breakpoint($nine_hundred) {
+		font-size: 12px;
+	}
+	@include breakpoint($seven_six_seven) {
+    	font-size: 12px;
+  	}
+  	@include breakpoint($three_fourty) {
+  		font-size: 10px;
+  	}
+}
+
+body {
+	font-family: $font-stack-1;
+	color:#444;
+	font-size: 14px;
+	font-size: rem(14px);
+	color: #1A1A1A;
+}
+
+p, 
+ul li {
+	font-family: $font-stack-1;
+	font-size: 14px;
+	font-size: rem(14px);
+	line-height: 21px;
+	line-height: rem(21px);
+	font-weight: 300;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+#{headings()} {
+	font-family: $font-stack-1;
+	line-height: 1.2;
+	margin: 0;
+	font-weight: 600;
+}
+
+h1 {
+	font-size: 72px;
+	font-size: rem(72px);
+	line-height: 87px;
+	line-height: rem(87px);
+}
+
+h2 {
+	font-size: 48px;
+	font-size: rem(48px);
+}
+
+h3 {
+	font-size: 48px;
+	font-size: rem(48px);
+	line-height: 87px;
+	line-height: rem(87px);
+	font-weight: 400;
+	color: #1A1A1A;
+	span {
+		color: #FF7700;
+		font-weight: 600;
+	}
+}
+
+h4 {
+	font-size: 24px;
+	font-size: rem(24px);
+	font-weight: 300;
+	line-height: 20px;
+	line-height: rem(20px);
+	color: #1A1A1A;
+}
+
+h5 {
+	font-size: 24px;
+	font-size: rem(24px);
+	line-height: 35px;
+	line-height: rem(35px);
+	font-weight: 300;
+}
+
+h6 {
+	font-size: 16px;
+	font-size: rem(16px);
+	text-transform: uppercase;
+	margin-bottom: rem(20px);
+}
+
+@include breakpoint($one_three) {
+	.fd-module-heading {
+		margin-bottom: 30px;
+		margin-bottom: rem(30px);
+	}
+	#{headings()} {
+		line-height: 1.2;
+	}
+}
+
+
+/* clear */
+.clear:before,
+.clear:after {
+    content:' ';
+    display:table;
+}
+
+.clear:after {
+    clear:both;
+}
+.clear {
+    *zoom:1;
+}
+img {
+	max-width:100%;
+	vertical-align:bottom;
+}
+a {
+	color:#444;
+	text-decoration:none;
+	//-webkit-transition: all 0.5s ease;
+    //-moz-transition: all 0.5s ease;
+    //-o-transition: all 0.5s ease;
+    //transition: all 0.5s ease;
+}
+a:hover {
+	//opacity: .8;
+}
+a:focus {
+	outline:0;
+}
+a:hover,
+a:active {
+	outline:0;
+}
+input:focus {
+	outline:0;
+	border:1px solid #04A4CC;
+}
+
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+
+/* wrapper */
+.wrapper {
+	margin:0 auto;
+	position:relative;
+}
+/* header */
+.header {
+
+}
+/* logo */
+.logo {
+
+}
+.logo-img {
+
+}
+/* nav */
+.nav {
+
+}
+/* sidebar */
+.sidebar {
+
+}
+/* footer */
+.footer {
+
+}
+
+
+/*------------------------------------*\
+    MISC
+\*------------------------------------*/
+
+::selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-webkit-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-moz-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+
+/*------------------------------------*\
+    WORDPRESS CORE
+\*------------------------------------*/
+
+.alignnone {
+	margin:5px 20px 20px 0;
+}
+.aligncenter,
+div.aligncenter {
+	display:block;
+	margin:5px auto 5px auto;
+}
+.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+a img.alignnone {
+	margin:5px 20px 20px 0;
+}
+a img.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.aligncenter {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.wp-caption {
+	background:#FFF;
+	border:1px solid #F0F0F0;
+	max-width:96%;
+	padding:5px 3px 10px;
+	text-align:center;
+}
+.wp-caption.alignnone {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignleft {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignright {
+	margin:5px 0 20px 20px;
+}
+.wp-caption img {
+	border:0 none;
+	height:auto;
+	margin:0;
+	max-width:98.5%;
+	padding:0;
+	width:auto;
+}
+.wp-caption .wp-caption-text,
+.gallery-caption {
+	font-size:11px;
+	line-height:17px;
+	margin:0;
+	padding:0 4px 5px;
+}
+.sticky {
+
+}
+.bypostauthor {
+
+}
+
+/*------------------------------------*\
+    PRINT
+\*------------------------------------*/
+
+@media print {
+	* {
+		background:transparent !important;
+		color:#000 !important;
+		box-shadow:none !important;
+		text-shadow:none !important;
+	}
+	a,
+	a:visited {
+		text-decoration:underline;
+	}
+	a[href]:after {
+		content:" (" attr(href) ")";
+	}
+	abbr[title]:after {
+		content:" (" attr(title) ")";
+	}
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content:"";
+	}
+	pre,blockquote {
+		border:1px solid #999;
+		page-break-inside:avoid;
+	}
+	thead {
+		display:table-header-group;
+	}
+	tr,img {
+		page-break-inside:avoid;
+	}
+	img {
+		max-width:100% !important;
+	}
+	@page {
+		margin:0.5cm;
+	}
+	p,
+	h2,
+	h3 {
+		orphans:3;
+		widows:3;
+	}
+	h2,
+	h3 {
+		page-break-after:avoid;
+	}
+}
+
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
